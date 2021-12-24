@@ -42,7 +42,7 @@ export default function LinkComp({
               ? ' active'
               : '')
           }
-          onClick={() => onLeafNodeClick(`${currentNode}/${link.path}`)}
+          onClick={() => onLeafNodeClick(`${link.to}`)}
         >
           <IconSC className="k-link-icon k-branch-icon">
             {link.icon ? link.icon : defaultLeafIcon}
