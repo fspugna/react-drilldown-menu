@@ -8,18 +8,19 @@ import {
   BackButtonText,
 } from './BackButton-styles';
 
-export default function BackButton({ onClick }) {
+export default function BackButton({ onClick, label }) {
   return (
     <BackButtonSC className="k-back-button-container" onClick={onClick}>
       <BackButtonIcon className="k-back-button-icon">
         <ArrowLeft />
       </BackButtonIcon>
 
-      <BackButtonText className="k-back-button-text">Back</BackButtonText>
+      <BackButtonText className="k-back-button-text">{label}</BackButtonText>
     </BackButtonSC>
   );
 }
 
 BackButton.propTypes = {
   onClick: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired
 };

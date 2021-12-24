@@ -20,6 +20,7 @@ export default function Page({
   onBackButtonClick,
   onNodeClick,
   onLeafNodeClick,
+  backButtonLabel
 }) {
   const [currentLinks, setCurrentLinks] = useState({});
 
@@ -30,7 +31,7 @@ export default function Page({
 
   return (
     <PageSC menuWidth={menuWidth} className="k-page">
-      {path ? <BackButton onClick={onBackButtonClick} /> : null}
+      {path ? <BackButton onClick={onBackButtonClick} label={backButtonLabel} /> : null}
 
       <LinksContainer className="k-links-container">
         {Object.keys(currentLinks).map((node) => (

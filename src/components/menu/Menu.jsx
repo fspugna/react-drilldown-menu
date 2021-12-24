@@ -24,6 +24,7 @@ export const Menu = ({
   rightArrowIcon,
   onLeafNodeClick,
   customTheme,
+  backButtonLabel
 }) => {
   const [menuWidth, setMenuWidth] = useState(0);
   const [pages, setPages] = useState([]);
@@ -98,6 +99,7 @@ export const Menu = ({
                 onBackButtonClick={handleBackClick}
                 onNodeClick={handleNodeClick}
                 onLeafNodeClick={onLeafNodeClick}
+                backButtonLabel={backButtonLabel}
               />
             ))}
           </PageContainer>
